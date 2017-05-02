@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+var { HashRouter, Route, Switch } = require('react-router-dom');
+
 import nextArrow from './img/move-forward.png';
 import nextArrowReg from './img/move-forward-reg.png'
 import backArrow from './img/go-back.png'; 
@@ -157,10 +159,22 @@ var Confirmation = React.createClass ({
 class App extends Component {
   render() {
     return (
-      <Confirmation />
-    )
+     <HashRouter>
+        <Switch>
+           <Route path='/HomeScreen' component={HomeScreen}/>
+           <Route path='/JourneySplit' component={JourneySplit}/>
+           <Route path='/RecordId' component={RecordId}/>
+           <Route path='/AnalyzeSentiment' component={AnalyzeSentiment}/>
+           <Route path='/RecordSentiment' component={RecordSentiment}/>
+           <Route path='/SentimentResult' component={SentimentResult}/>
+           <Route path='/Confirmation' component={Confirmation}/>
+           <Route component={HomeScreen}/>
+        </Switch>
+     </HashRouter>
+   );
   }
 }
+
 
 class Back extends Component {
   render () {
@@ -185,6 +199,8 @@ class NextReg extends Component {
     )
   }
 }
+
+
 
 
 export default App;
