@@ -109,6 +109,11 @@ input {
   margin: auto;
   padding-top: 4%;
   font-size: 17px;
+  visibility: hidden;
+}
+
+.senti-selected {
+  visibility: visible;
 }
 
 /*AnalyzeSentiment*/
@@ -132,7 +137,7 @@ input {
 }
 
 
-.twitter {
+.twitter { 
   padding-bottom: 5%;
 }
 
