@@ -151,6 +151,7 @@ var RecordSentiment = React.createClass ({
 
 // create the AnalyzeSentiment
 var AnalyzeSentiment = React.createClass ({
+
   render: function() {
     return (
       <div className="App-page">
